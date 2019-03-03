@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchForm from './SearchForm';
+import BookCard from './BookCard';
 
 function Home() {
 
@@ -8,6 +9,7 @@ function Home() {
     <div className="container">
       <h1 className="text-center p-4 mt-3">Google Book Voyager</h1>
       <SearchForm />
+      <BookCard />
     </div>
 
   );
