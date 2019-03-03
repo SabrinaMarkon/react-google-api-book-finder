@@ -1,0 +1,42 @@
+html,
+body {
+  height: 100%;
+  margin: auto;
+  background: linear-gradient(90deg, #e1dcd9 50%, #8f8681 50%);
+  color: #414143;
+  margin: auto;
+}
+
+h1 {
+  font-size: 4rem;
+  text-shadow: 2px 2px 2px #fff, -1px -1px #414143;
+}
+
+h1:hover {
+  color: #a67f78;
+}
+
+#searchform {
+  margin: 2rem;
+  box-shadow: 2px 2px 10px #414143;
+  background: #fff;
+}
+
+#searchbox {
+  height: 100px;
+  font-size: 2rem;
+  padding: 2rem;
+  border-style: none;
+}
+
+#searchbutton {
+  height: 100px;
+  font-size: 2rem;
+  color: #414143;
+  padding: 2rem;
+  border-style: none;
+}
+
+#searchbutton:hover {
+  color: #a67f78;
+}
