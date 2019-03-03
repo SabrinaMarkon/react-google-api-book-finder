@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
-import '../styles.css';
+import React from 'react';
 
-class Home extends Component {
-  render() {
-    return (
+function Home() {
+
+  return (
+
       <div className="home">
+      <h1>BOOKS</h1>
+      <p>Are so wonderful!</p>
+    </div>
 
-      </div>
-    );
-  }
+  );
+
 }
 
 export default Home;
