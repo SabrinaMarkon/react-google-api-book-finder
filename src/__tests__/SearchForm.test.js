@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SearchForm from '../components/SearchForm';
 
-// describe('Shallow rendered search form'), () => {
+// test('Shallow rendered search form'), () => {
 
   it('renders the search form without crashing', () => {
     const div = document.createElement('div');
