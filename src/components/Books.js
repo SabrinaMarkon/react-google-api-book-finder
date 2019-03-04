@@ -3,17 +3,16 @@ import BookCard from './BookCard';
 
 const Books = (props) => {
 
-    let books = props.booksarray;
-    console.log(books);
+    if (props.booksarray) {
+        let books = props.booksarray;
+        console.log(books.items[0].volumeInfo.title);
 
-     if(books) {
-        // let durr = books.map((book) => {
-        //     console.log(book.volumeInfo.title);
-        //     return <BookCard />
-        // });
-     }
+        
+    }
 
-        // console.log(typeof durr);
+
+
+
 
 
     return (
