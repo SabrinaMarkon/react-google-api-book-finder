@@ -1,19 +1,26 @@
 import React from 'react';
 import BookCard from './BookCard';
 
-function Books() {
+const Books = (props) => {
 
-    const books = bookcards.map((book) => {
-        <BookCard key={book.index} />
-    });
+    let books = props.booksarray;
+    console.log(books);
+
+     if(books) {
+        // let durr = books.map((book) => {
+        //     console.log(book.volumeInfo.title);
+        //     return <BookCard />
+        // });
+     }
+
+        // console.log(typeof durr);
+
 
     return (
-  
-        <div id="showbooks" className="container">
-            {books}
-        </div>
-        
-  
+
+        <div id="showbooks" className="container card-deck">
+         
+        </div>    
     );
 
   }
