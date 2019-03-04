@@ -16,11 +16,20 @@ class Home extends Component {
   async getBooks(words) {
 
     const API_KEY = process.env.REACT_APP_GOOGLE_BOOKS_API_KEY;
-    axios.get(`https://www.googleapis.com/books/v1/volumes?q=` + words + '&key=' + API_KEY)
+
+    try {
+
+      axios.get(`https://www.googleapis.com/books/v1/volumes?q=` + words + '&key=' + API_KEY)
       .then(res => {
         const books = res.data;
         this.setState({ books });
       })
+      
+    } catch (err) {
+      console.log('An error occurred: ' + err);
+
+    }
+
   }
 
   render() {
