@@ -10,10 +10,13 @@ const Books = (props) => {
         let books = props.booksarray.items;
         //  console.log(books.items[0].volumeInfo); // one book.
 
-        bookcards = books.map((book) => {
-            return <BookCard key={book.id} id={book.id} thumb={book.volumeInfo.imageLinks.thumbnail} 
-            title={book.volumeInfo.title} authors={book.volumeInfo.authors} url={book.saleInfo.buyLink} />
-        });
+        if (books !== undefined) {
+
+            bookcards = books.map((book) => {
+                return <BookCard key={book.id} id={book.id} thumb={book.volumeInfo.imageLinks.thumbnail} 
+                title={book.volumeInfo.title} authors={book.volumeInfo.authors} infolink={book.volumeInfo.infoLink} />
+            });
+        }
 
     } else {
         bookcards = '';
