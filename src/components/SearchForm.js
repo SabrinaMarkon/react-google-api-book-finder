@@ -19,9 +19,17 @@ class SearchForm extends Component {
         });
     }
 
-    handleSearch = () => {
+    handleSearch = (e) => {
 
-        this.props.getBooks(this.state.words);
+        e.preventDefault();
+
+        if (this.state.words !== '') {
+
+            this.props.getBooks(this.state.words);
+            this.setState({
+                words: ''
+            });
+        }
     }
 
     render() {
@@ -32,7 +40,10 @@ class SearchForm extends Component {
                 <input id="searchinput" type="text" className="form-control" placeholder="Search for a book!" 
                 aria-label="Search for a book!" value={this.state.words} onChange={this.handleChange} />
                     <span className="input-group-append">
-                        <button id="searchbutton" className="btn fa fa-search" type="button" onClick={this.handleSearch}></button>
+                        <form>
+                            <button id="searchbutton" className="btn fa fa-search" type="submit" 
+                            onClick={this.handleSearch}></button>
+                        </form>
                     </span>
             </div>
             );
