@@ -37,18 +37,15 @@ class SearchForm extends Component {
         return (
 
             <div id="searchform" className="container input-group my-3">
-                <form>
+                <form className="form-inline">
                     <label className="sr-only" htmlFor="searchbox">Search for a book!</label>
                     <input id="searchinput" type="text" className="form-control" placeholder="Search for a book!" 
-                    aria-label="Search for a book!" value={this.state.words} required 
-                    onChange={this.handleChange} onKeyPress={this.handleChange} />
-                    <span className="input-group-append">
-                        <button id="searchbutton" className="btn fa fa-search" type="submit" 
-                        onClick={this.handleSearch}></button>
-                        
-                    </span>
+                    aria-label="Search for a book!" size="50" value={this.state.words} required 
+                    onChange={this.handleChange}/>
+                    <button id="searchbutton" className="input-group-append btn fa fa-search" type="submit" onClick={this.handleSearch}></button>
                 </form>
             </div>
+
             );
 
     }
