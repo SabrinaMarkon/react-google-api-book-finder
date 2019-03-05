@@ -14,7 +14,7 @@ const Books = (props) => {
 
             bookcards = books.map((book) => {
                 return <BookCard key={book.id} id={book.id} thumb={book.volumeInfo.imageLinks.thumbnail} 
-                title={book.volumeInfo.title} authors={book.volumeInfo.authors} infolink={book.volumeInfo.infoLink} />
+                title={book.volumeInfo.title} authors={book.volumeInfo.authors} publisher={book.volumeInfo.publisher} infolink={book.volumeInfo.infoLink} />
             });
         }
 
@@ -25,7 +25,9 @@ const Books = (props) => {
     return (
 
         <div id="showbooks" className="container card-deck">
-            {bookcards}
+            <div className="mx-auto">
+                {bookcards}
+            </div>
         </div>    
     );
 

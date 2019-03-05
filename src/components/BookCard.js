@@ -22,12 +22,18 @@ function BookCard(props) {
                     <div className="card-header border">
                         <h3 className="my-0 font-weight-normal">{props.title}</h3>
                     </div>
-                    <div className="card-title mt-2 mb-3 text-muted">
-                        <div>Authors:</div>
-                        {bookauthors}
+                    <div className="mx-auto">
+                        <div className="card-title mt-4 mb-3 text-muted text-left">
+                            <div className="text-muted small">By:</div>
+                            <div className="text-body">{bookauthors}</div>
+                        </div>
+                        <div className="card-title mt-1 mb-4 text-left">
+                            <div className="text-muted small">Published by:</div>
+                            <div className="text-body">{props.publisher}</div>
+                        </div>                
                     </div>
-                    <p className="card-text">
-                        <img src={props.thumb} alt={props.title} width="60%" className="img img-responsive" />
+                    <p className="card-text mt-2 mb-4">
+                        <img src={props.thumb} alt={props.title} className="bookcover img img-responsive border" />
                     </p>
                     <a href={props.infolink} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg btn-block mt-auto">
                             Preview
