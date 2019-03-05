@@ -13,30 +13,31 @@ const Books = (props) => {
         let thumb = '';
 
         if (books) {
+          
+            bookcards = books.map((book) => {
 
             // some books on Google have no cover thumbnails.
-            if (imageLinks.thumbnail) {
+            if (book.volumeInfo.imageLinks.thumbnail) {
                 
                 thumb = book.volumeInfo.imageLinks.thumbnail;
             } else {
 
                 thumb = '/images/blank-book-cover.jpg';
             }
-
-            bookcards = books.map((book) => {
+                            
                 return <BookCard key={book.id} id={book.id} thumb={thumb} 
-                title={book.volumeInfo.title} authors={book.volumeInfo.authors} publisher={book.volumeInfo.publisher} infolink={book.volumeInfo.infoLink} />
+                title={book.volumeInfo.title} authors={book.volumeInfo.authors} 
+                publisher={book.volumeInfo.publisher} infolink={book.volumeInfo.infoLink} />
             });
 
-        }
+        } 
 
     }
     
     return (
 
         <div id="showbooks" className="container card-deck">
-        <img src='/images/blank-book-cover.jpg'>
-            {bookcards}
+           {bookcards}
         </div>    
     );
 
