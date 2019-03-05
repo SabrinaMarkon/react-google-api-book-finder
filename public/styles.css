@@ -17,6 +17,26 @@ body {
   color: #a67f78;
 }
 
+#madewithlove {
+  text-shadow: 1px 1px 1px #fff, -1px -1px 1px #414143;
+}
+
+#madewithlove-name {
+  text-shadow: 0 0 0;
+  color: #fff;
+}
+
+#madewithlove-name:hover {
+  text-shadow: 1px 1px 1px #fff, -1px -1px 1px #414143;
+  text-decoration: none;
+  color: #fff;
+}
+
+#madewithlove-heart:hover {
+  text-shadow: 1px 1px 1px #fff, -1px -1px 1px #414143;
+  color: #a67f78; 
+}
+
 #searchform {
   height: 100px;
   box-shadow: 2px 2px 10px #414143;
@@ -79,8 +99,7 @@ body {
   #title { font-size: 1rem; }
   #searchinput { font-size: 0.6rem; }
   #searchbutton { font-size: 0.6rem; }
-  .card { 
-    max-width: 240px; }
+  .card { max-width: 240px; }
 }
 @media (min-width: 320px)
 {
@@ -89,7 +108,8 @@ body {
   #searchbutton { font-size: 0.8rem; }
   .card { 
     min-width: 260px;
-    max-width: 400px; }
+    max-width: 400px; 
+  }
 }
 @media (min-width: 420px)
 {
@@ -98,7 +118,8 @@ body {
   #searchbutton { font-size: 1.5rem; }
   .card { 
     min-width: 390px;
-    max-width: 400px; }
+    max-width: 400px; 
+  }
 }
 
 @media (min-width: 420px)
@@ -108,7 +129,8 @@ body {
   #searchbutton { font-size: 1.5rem; }
   .card { 
     min-width: 400px;
-    max-width: 700px; }
+    max-width: 700px; 
+  }
 }
 
 @media (min-width: 768px)
@@ -118,7 +140,8 @@ body {
   #searchbutton { font-size: 2rem; }
   .card { 
     min-width: 280px;
-    max-width: 300px; }
+    max-width: 300px; 
+  }
 }
 
 @media (min-width:992px)
@@ -126,7 +149,8 @@ body {
   #title { font-size: 5rem; }
   .card { 
     min-width: 380px;
-    max-width: 520px; }
+    max-width: 520px; 
+  }
 }
 
 @media (min-width:1200px)
