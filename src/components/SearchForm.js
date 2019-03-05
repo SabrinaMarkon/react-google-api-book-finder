@@ -23,9 +23,12 @@ class SearchForm extends Component {
 
         e.preventDefault();
 
-        if (this.state.words !== '') {
+        if (this.state.words) {
 
-            this.props.getBooks(this.state.words);
+            // remove special characters from search string.
+            let clean = this.state.words.replace(/[&/\\#,+()$~%.'":*?<>{}]/g,'');
+            
+            this.props.getBooks(clean);
             this.setState({
                 words: ''
             });
@@ -45,7 +48,6 @@ class SearchForm extends Component {
                     <button id="searchbutton" className="input-group-append btn fa fa-search" type="submit" onClick={this.handleSearch}></button>
                 </form>
             </div>
-
             );
 
     }

@@ -13,7 +13,7 @@ const Books = (props) => {
         let thumb = '';
 
         if (books) {
-
+          
             bookcards = books.map((book) => {
 
             // some books on Google have no cover thumbnails.
@@ -31,6 +31,7 @@ const Books = (props) => {
             });
 
         } 
+
     }
     
     return (
