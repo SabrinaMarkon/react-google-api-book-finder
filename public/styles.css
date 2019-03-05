@@ -45,7 +45,6 @@ body {
 
 #searchinput {
   height: 100px;
-  max-width: 80%;
   margin: auto;
   padding: 2rem;
   border-style: none;
@@ -59,6 +58,7 @@ body {
 
 #searchbutton {
   height: 100px;
+  background: none;
   color: #414143;
   padding: 2rem;
   border-style: none;
@@ -119,7 +119,7 @@ body {
   #noresults { font-size: 1rem }
   #madewithlove { font-size: 1rem }
   #searchinput { font-size: 1rem; }
-  #searchbutton { font-size: 0.8rem; }
+  #searchbutton { font-size: 1rem; }
   .card { 
     min-width: 260px;
     max-width: 400px; 
@@ -140,11 +140,6 @@ body {
 
 @media (min-width: 420px)
 {
-  #title { font-size: 2.2rem; }
-  #noresults { font-size: 2rem }
-  #madewithlove { font-size: 1.5rem }
-  #searchinput { font-size: 1.5rem; }
-  #searchbutton { font-size: 1.5rem; }
   .card { 
     min-width: 400px;
     max-width: 700px; 
@@ -154,7 +149,6 @@ body {
 @media (min-width: 768px)
 {
   #title { font-size: 3rem; }
-  #noresults { font-size: 2rem }
   #madewithlove { font-size: 2rem }
   #searchinput { font-size: 2rem; }
   #searchbutton { font-size: 2rem; }
@@ -168,7 +162,6 @@ body {
 {
   #title { font-size: 5rem; }
   #noresults { font-size: 3rem }
-  #madewithlove { font-size: 2rem }
   .card { 
     min-width: 380px;
     max-width: 520px; 
@@ -178,8 +171,6 @@ body {
 @media (min-width:1200px)
 {
   #title { font-size: 6rem; }
-  #noresults { font-size: 3rem }
-  #madewithlove { font-size: 2rem }
   .card { 
     min-width: 500px;
     }
