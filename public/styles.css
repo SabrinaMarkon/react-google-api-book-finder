@@ -74,14 +74,22 @@ body {
 }
 
 /* Mobile First Responsive Design */
+@media (max-width: 319px)
+{
+  #title { font-size: 1rem; }
+  #searchinput { font-size: 0.6rem; }
+  #searchbutton { font-size: 0.6rem; }
+  .card { 
+    max-width: 240px; }
+}
 @media (min-width: 320px)
 {
   #title { font-size: 1.4rem; }
   #searchinput { font-size: 0.8rem; }
   #searchbutton { font-size: 0.8rem; }
   .card { 
-    min-width: 290px;
-    width: 290px; }
+    min-width: 260px;
+    max-width: 400px; }
 }
 @media (min-width: 420px)
 {
@@ -90,7 +98,17 @@ body {
   #searchbutton { font-size: 1.5rem; }
   .card { 
     min-width: 390px;
-    width: 390px; }
+    max-width: 400px; }
+}
+
+@media (min-width: 420px)
+{
+  #title { font-size: 2.2rem; }
+  #searchinput { font-size: 1.5rem; }
+  #searchbutton { font-size: 1.5rem; }
+  .card { 
+    min-width: 400px;
+    max-width: 700px; }
 }
 
 @media (min-width: 768px)
@@ -99,16 +117,22 @@ body {
   #searchinput { font-size: 2rem; }
   #searchbutton { font-size: 2rem; }
   .card { 
-    min-width: 400px;
-    width: 400px; }
+    min-width: 280px;
+    max-width: 300px; }
 }
 
 @media (min-width:992px)
 {
   #title { font-size: 5rem; }
+  .card { 
+    min-width: 380px;
+    max-width: 520px; }
 }
 
 @media (min-width:1200px)
 {
   #title { font-size: 6rem; }
+  .card { 
+    min-width: 500px;
+    }
 }
