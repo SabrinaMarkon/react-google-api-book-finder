@@ -49,10 +49,10 @@ class Home extends Component {
         <Books booksarray={this.state.books} />
         <footer id="madewithlove" className="pb-5">
           <div className="container">
-            <h3 className="m-0 text-center text-dark">
+            <p className="m-0 text-center text-dark">
               Made with <i id="madewithlove-heart" className="fa fa-heart" aria-hidden="true"></i> 4 U by <a href="http://sabrinamarkon.com" target="_blank" 
               rel="noopener noreferrer" id="madewithlove-name">Sabrina Markon</a>
-		        </h3>
+		        </p>
           </div>
         </footer>
       </div>

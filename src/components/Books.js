@@ -4,7 +4,7 @@ import BookCard from './BookCard';
 const Books = (props) => {
 
     // need to get this to show properly instead of just text. (JSX so not the same as vanilla behavior)
-    let bookcards = '<div id="noresults">No results were found.</div>';
+    let bookcards = '';
 
     if (props.booksarray) {
 
@@ -36,12 +36,22 @@ const Books = (props) => {
 
     }
     
-    return (
+    if (bookcards === '') {
 
-        <div id="showbooks" className="container card-deck">
-           {bookcards}
-        </div>    
-    );
+        return (
+            
+            <div id="noresults">No results were found.</div>
+
+        );
+    } else {
+        
+        return (
+
+            <div id="showbooks" className="container card-deck">
+               {bookcards}
+            </div>    
+        );
+    }
 
   }
   
