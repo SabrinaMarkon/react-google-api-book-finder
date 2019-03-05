@@ -39,15 +39,16 @@ class SearchForm extends Component {
     render() {
         return (
 
-            <div id="searchform" className="container input-group my-3">
-                <form className="form-inline">
+            <form>
+                <div id="searchform" className="input-group my-3">
                     <label className="sr-only" htmlFor="searchbox">Search for a book!</label>
-                    <input id="searchinput" type="text" className="form-control" placeholder="Search for a book!" 
-                    aria-label="Search for a book!" size="50" value={this.state.words} required 
-                    onChange={this.handleChange}/>
-                    <button id="searchbutton" className="input-group-append btn fa fa-search" type="submit" onClick={this.handleSearch}></button>
-                </form>
-            </div>
+                    <input id="searchinput" type="text" className="form-control" placeholder="Search for a book!" aria-label="Search for a book!" value={this.state.words} required onChange={this.handleChange} />
+                    <div className="input-group-btn">
+                        <button id="searchbutton" type="submit" className="btn" onClick={this.handleSearch}><i className="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+
             );
 
     }

@@ -3,7 +3,8 @@ import BookCard from './BookCard';
 
 const Books = (props) => {
 
-    let bookcards = '<div id="noresults">No results were found.</div>';
+    // need to get this to show properly instead of just text. (JSX so not the same as vanilla behavior)
+    let bookcards = '';
 
     if (props.booksarray) {
 
@@ -22,6 +23,7 @@ const Books = (props) => {
                 thumb = book.volumeInfo.imageLinks.thumbnail;
             } else {
 
+                // need to do something about CORS warning here.
                 thumb = '/images/blank-book-cover.jpg';
             }
                             
@@ -34,12 +36,22 @@ const Books = (props) => {
 
     }
     
-    return (
+    if (bookcards === '') {
 
-        <div id="showbooks" className="container card-deck">
-           {bookcards}
-        </div>    
-    );
+        return (
+            
+            <div id="noresults">No results were found.</div>
+
+        );
+    } else {
+        
+        return (
+
+            <div id="showbooks" className="container card-deck">
+               {bookcards}
+            </div>    
+        );
+    }
 
   }
   
