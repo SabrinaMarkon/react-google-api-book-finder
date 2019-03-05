@@ -3,6 +3,9 @@ import SearchForm from './SearchForm';
 import Books from './Books';
 import axios from 'axios';
 
+const API_KEY = process.env.REACT_APP_GOOGLE_BOOKS_API_KEY;
+const DEFAULT_SEARCH = "React";
+
 class Home extends Component {
 
   constructor() {
@@ -13,9 +16,13 @@ class Home extends Component {
     this.getBooks = this.getBooks.bind(this);
   }
 
-  async getBooks(words) {
+  componentDidMount() {
 
-    const API_KEY = process.env.REACT_APP_GOOGLE_BOOKS_API_KEY;
+      this.getBooks(DEFAULT_SEARCH);
+      
+  }
+
+  async getBooks(words) {
 
     try {
 
