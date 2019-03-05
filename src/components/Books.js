@@ -17,23 +17,29 @@ const Books = (props) => {
           
             bookcards = books.map((book) => {
 
-            // some books on Google have no cover thumbnails.
-            if (book.volumeInfo.imageLinks.thumbnail) {
-                
-                thumb = book.volumeInfo.imageLinks.thumbnail;
-            } else {
+                try {
 
-                // need to do something about CORS warning here.
-                thumb = '/images/blank-book-cover.jpg';
-            }
-                            
-                return <BookCard key={book.id} id={book.id} thumb={thumb} 
-                title={book.volumeInfo.title} authors={book.volumeInfo.authors} 
-                publisher={book.volumeInfo.publisher} infolink={book.volumeInfo.infoLink} />
+                    // some books on Google have no cover thumbnails.
+                    if (book.volumeInfo.imageLinks.thumbnail) {
+                        
+                        thumb = book.volumeInfo.imageLinks.thumbnail;
+                    } else {
+    
+                        // need to do something about CORS warning here.
+                        thumb = '/images/blank-book-cover.jpg';
+                    }
+                                    
+                        return <BookCard key={book.id} id={book.id} thumb={thumb} 
+                        title={book.volumeInfo.title} authors={book.volumeInfo.authors} 
+                        publisher={book.volumeInfo.publisher} infolink={book.volumeInfo.infoLink} />
+                        
+                } catch(err) {
+    
+                    return false;
+                }
+
             });
-
-        } 
-
+        }
     }
     
     if (bookcards === '') {
