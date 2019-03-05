@@ -2,18 +2,18 @@ import React from 'react';
 
 function BookCard(props) {
 
+    let bookauthorswithanydups = '';
     let bookauthors = '';
     
     if (props.authors) {
 
-        /////////////// REMOVE DUPS!!! 
-
-        bookauthors = props.authors.map((author, id) => {
+        bookauthorswithanydups = props.authors.map((author, id) => {
             return <div key={id}>{author}</div>
         })
-    }
 
-    //document.querySelectorAll('[data-reactid$=".$42"]') // find duplicate key
+        // Remove any duplicates, so we don't get duplicate key errors. Sets do not permit duplicates.
+        bookauthors = Array.from(new Set(bookauthorswithanydups));
+    }
 
     return (
   
