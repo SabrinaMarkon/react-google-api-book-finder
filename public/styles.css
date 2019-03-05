@@ -93,6 +93,14 @@ body {
   text-align: center;
 }
 
+#noresults {
+  margin: auto;
+  padding: 3rem;
+  color: #e1dcd9;
+  font-size: 3rem;
+  text-shadow: 2px 2px 1px #fff, -1px -1px 1px #414143;
+}
+
 /* Mobile First Responsive Design */
 @media (max-width: 319px)
 {

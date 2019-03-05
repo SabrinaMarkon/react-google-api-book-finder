@@ -23,9 +23,12 @@ class SearchForm extends Component {
 
         e.preventDefault();
 
-        if (this.state.words !== '') {
+        if (this.state.words) {
 
-            this.props.getBooks(this.state.words);
+            // remove special characters from search string.
+            let clean = this.state.words.replace(/[&/\\#,+()$~%.'":*?<>{}]/g,'');
+            
+            this.props.getBooks(clean);
             this.setState({
                 words: ''
             });
@@ -36,19 +39,18 @@ class SearchForm extends Component {
     render() {
         return (
 
-            <div id="searchform" className="container input-group my-3">
-                <form>
-                    <label className="sr-only" htmlFor="searchbox">Search for a book!</label>
-                    <input id="searchinput" type="text" className="form-control" placeholder="Search for a book!" 
-                    aria-label="Search for a book!" value={this.state.words} required 
-                    onChange={this.handleChange} onKeyPress={this.handleChange} />
-                    <span className="input-group-append">
-                        <button id="searchbutton" className="btn fa fa-search" type="submit" 
-                        onClick={this.handleSearch}></button>
-                        
-                    </span>
-                </form>
-            </div>
+            <form>
+                <div id="searchform" className="container input-group my-3">
+                        <label className="sr-only" htmlFor="searchbox">Search for a book!</label>
+                        <input id="searchinput" type="text" className="form-control" placeholder="Search for a book!" 
+                        aria-label="Search for a book!" size="50" value={this.state.words} required 
+                        onChange={this.handleChange} onKeyPress={this.handleChange} />
+                        <span className="input-group-append">
+                            <button id="searchbutton" className="btn fa fa-search" type="submit" 
+                            onClick={this.handleSearch}></button>
+                        </span>
+                </div>
+            </form>
             );
 
     }
