@@ -3,7 +3,8 @@ import BookCard from './BookCard';
 
 const Books = (props) => {
 
-    let bookcards = '';
+    // need to get this to show properly instead of just text. (JSX so not the same as vanilla behavior)
+    let bookcards = '<div id="noresults">No results were found.</div>';
 
     if (props.booksarray) {
 
@@ -13,8 +14,20 @@ const Books = (props) => {
         if (books !== undefined) {
 
             bookcards = books.map((book) => {
-                return <BookCard key={book.id} id={book.id} thumb={book.volumeInfo.imageLinks.thumbnail} 
-                title={book.volumeInfo.title} authors={book.volumeInfo.authors} publisher={book.volumeInfo.publisher} infolink={book.volumeInfo.infoLink} />
+
+            // some books on Google have no cover thumbnails.
+            if (book.volumeInfo.imageLinks.thumbnail) {
+                
+                thumb = book.volumeInfo.imageLinks.thumbnail;
+            } else {
+
+                // need to do something about CORS warning here.
+                thumb = '/images/blank-book-cover.jpg';
+            }
+                            
+                return <BookCard key={book.id} id={book.id} thumb={thumb} 
+                title={book.volumeInfo.title} authors={book.volumeInfo.authors} 
+                publisher={book.volumeInfo.publisher} infolink={book.volumeInfo.infoLink} />
             });
         }
 
