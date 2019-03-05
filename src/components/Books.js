@@ -25,9 +25,7 @@ const Books = (props) => {
     return (
 
         <div id="showbooks" className="container card-deck">
-            <div className="mx-auto">
-                {bookcards}
-            </div>
+            {bookcards}
         </div>    
     );
 
