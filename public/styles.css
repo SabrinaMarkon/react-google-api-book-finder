@@ -17,6 +17,26 @@ body {
   color: #a67f78;
 }
 
+#madewithlove {
+  text-shadow: 1px 1px 1px #fff, -1px -1px 1px #414143;
+}
+
+#madewithlove-name {
+  text-shadow: 0 0 0;
+  color: #fff;
+}
+
+#madewithlove-name:hover {
+  text-shadow: 1px 1px 1px #fff, -1px -1px 1px #414143;
+  text-decoration: none;
+  color: #fff;
+}
+
+#madewithlove-heart:hover {
+  text-shadow: 1px 1px 1px #fff, -1px -1px 1px #414143;
+  color: #a67f78; 
+}
+
 #searchform {
   height: 100px;
   box-shadow: 2px 2px 10px #414143;
@@ -53,39 +73,64 @@ body {
 #showbooks {
   margin-top: 3rem;
   margin-bottom: 3rem;
-  padding: 2rem;
-  min-height: 800px;
+  margin-left: 0;
+  padding: 0 1rem 2rem;
   box-shadow: 2px 2px 10px #414143;
   background: #414143;
 }
 
+.bookcover {
+  height: 300px;
+  box-shadow: 2px 2px 10px #414143;
+}
+
 .card {
   display: flex;
-  margin-top: 40px;
-  min-width: 300px;
-  max-width: 400px;
-  min-height: 500px;
+  margin-top: 32px;
   box-shadow: 2px 2px 10px #414143;
   background: #fff;
   color: #414143;
   text-align: center;
 }
 
-
 /* Mobile First Responsive Design */
+@media (max-width: 319px)
+{
+  #title { font-size: 1rem; }
+  #searchinput { font-size: 0.6rem; }
+  #searchbutton { font-size: 0.6rem; }
+  .card { max-width: 240px; }
+}
 @media (min-width: 320px)
 {
   #title { font-size: 1.4rem; }
   #searchinput { font-size: 0.8rem; }
   #searchbutton { font-size: 0.8rem; }
-  .card { width: 300px; }
+  .card { 
+    min-width: 260px;
+    max-width: 400px; 
+  }
 }
 @media (min-width: 420px)
 {
   #title { font-size: 2.2rem; }
   #searchinput { font-size: 1.5rem; }
   #searchbutton { font-size: 1.5rem; }
-  .card { width: 400px; }
+  .card { 
+    min-width: 390px;
+    max-width: 400px; 
+  }
+}
+
+@media (min-width: 420px)
+{
+  #title { font-size: 2.2rem; }
+  #searchinput { font-size: 1.5rem; }
+  #searchbutton { font-size: 1.5rem; }
+  .card { 
+    min-width: 400px;
+    max-width: 700px; 
+  }
 }
 
 @media (min-width: 768px)
@@ -93,14 +138,25 @@ body {
   #title { font-size: 3rem; }
   #searchinput { font-size: 2rem; }
   #searchbutton { font-size: 2rem; }
+  .card { 
+    min-width: 280px;
+    max-width: 300px; 
+  }
 }
 
 @media (min-width:992px)
 {
   #title { font-size: 5rem; }
+  .card { 
+    min-width: 380px;
+    max-width: 520px; 
+  }
 }
 
 @media (min-width:1200px)
 {
   #title { font-size: 6rem; }
+  .card { 
+    min-width: 500px;
+    }
 }
