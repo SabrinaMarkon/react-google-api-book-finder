@@ -11,8 +11,10 @@ const Books = (props) => {
         let books = props.booksarray.items;
         //  console.log(books.items[0].volumeInfo); // one book.
 
-        if (books !== undefined) {
+        let thumb = '';
 
+        if (books) {
+          
             bookcards = books.map((book) => {
 
             // some books on Google have no cover thumbnails.
@@ -29,16 +31,15 @@ const Books = (props) => {
                 title={book.volumeInfo.title} authors={book.volumeInfo.authors} 
                 publisher={book.volumeInfo.publisher} infolink={book.volumeInfo.infoLink} />
             });
-        }
 
-    } else {
-        bookcards = '';
+        } 
+
     }
     
     return (
 
         <div id="showbooks" className="container card-deck">
-            {bookcards}
+           {bookcards}
         </div>    
     );
 
