@@ -51,13 +51,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 3rem;
   box-shadow: none;
   outline: none;
 }
 
 #searchbutton {
   height: 100px;
+  background: none;
   color: #414143;
   padding: 2rem;
   border-style: none;
@@ -93,19 +94,32 @@ body {
   text-align: center;
 }
 
+#noresults {
+  margin: auto;
+  padding: 3rem;
+  color: #414143;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 2px 2px 1px #fff, -1px -1px 1px #414143;
+}
+
 /* Mobile First Responsive Design */
 @media (max-width: 319px)
 {
   #title { font-size: 1rem; }
-  #searchinput { font-size: 0.6rem; }
+  #noresults { font-size: 0.8rem }
+  #madewithlove { font-size: 0.8rem }
+  #searchinput { font-size: 0.8rem; }
   #searchbutton { font-size: 0.6rem; }
   .card { max-width: 240px; }
 }
 @media (min-width: 320px)
 {
   #title { font-size: 1.4rem; }
-  #searchinput { font-size: 0.8rem; }
-  #searchbutton { font-size: 0.8rem; }
+  #noresults { font-size: 1rem }
+  #madewithlove { font-size: 1rem }
+  #searchinput { font-size: 1rem; }
+  #searchbutton { font-size: 1rem; }
   .card { 
     min-width: 260px;
     max-width: 400px; 
@@ -114,6 +128,8 @@ body {
 @media (min-width: 420px)
 {
   #title { font-size: 2.2rem; }
+  #noresults { font-size: 2rem }
+  #madewithlove { font-size: 1.5rem }
   #searchinput { font-size: 1.5rem; }
   #searchbutton { font-size: 1.5rem; }
   .card { 
@@ -124,9 +140,6 @@ body {
 
 @media (min-width: 420px)
 {
-  #title { font-size: 2.2rem; }
-  #searchinput { font-size: 1.5rem; }
-  #searchbutton { font-size: 1.5rem; }
   .card { 
     min-width: 400px;
     max-width: 700px; 
@@ -136,6 +149,7 @@ body {
 @media (min-width: 768px)
 {
   #title { font-size: 3rem; }
+  #madewithlove { font-size: 2rem }
   #searchinput { font-size: 2rem; }
   #searchbutton { font-size: 2rem; }
   .card { 
@@ -147,6 +161,7 @@ body {
 @media (min-width:992px)
 {
   #title { font-size: 5rem; }
+  #noresults { font-size: 3rem }
   .card { 
     min-width: 380px;
     max-width: 520px; 

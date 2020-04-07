@@ -11,3 +11,5 @@ TODOS:
 - save searches to backend
 - pagination
 - fix CORS warning when blank thumbnail (for placeholder image)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5a3a5520-c613-451b-ad88-4969c3468249/deploy-status)](https://app.netlify.com/sites/sabrinamarkon-google-books-api-search/deploys)
