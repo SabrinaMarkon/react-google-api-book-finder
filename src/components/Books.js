@@ -31,7 +31,7 @@ const Books = (props) => {
                                     
                         return <BookCard key={book.id} id={book.id} thumb={thumb} 
                         title={book.volumeInfo.title} authors={book.volumeInfo.authors} 
-                        publisher={book.volumeInfo.publisher} infolink={book.volumeInfo.infoLink} />
+                        publisher={book.volumeInfo.publisher} previewLink={book.volumeInfo.previewLink} />
                         
                 } catch(err) {
     
