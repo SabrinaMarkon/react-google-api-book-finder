@@ -35,7 +35,7 @@ function BookCard(props) {
                     <p className="card-text mt-2 mb-4">
                         <img src={props.thumb} alt={props.title} className="bookcover img img-responsive border mb-3" />
                     </p>
-                    <a href={props.infolink} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg btn-block mt-auto">
+                    <a href={props.previewLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg btn-block mt-auto">
                             Preview
                     </a>
                 </div>
